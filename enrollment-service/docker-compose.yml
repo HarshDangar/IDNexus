@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    restart: no
+    environment:
+      POSTGRES_PASSWORD: changemeinprod!
+      TZ: Asia/Kolkata
+
+  adminer:
+    image: adminer:latest
+    restart: no
+    ports:
+      - 8889:8080
