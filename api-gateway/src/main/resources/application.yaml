@@ -17,3 +17,9 @@ spring:
                 - Path=/enrollment-service/**
               filters:
                 - StripPrefix=1
+            - id: identity-generation-service
+              uri: lb://identity-generation-service
+              predicates:
+                - Path=/identity-generation-service/**
+              filters:
+                - StripPrefix=1
